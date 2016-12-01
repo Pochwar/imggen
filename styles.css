@@ -1,0 +1,117 @@
+h3,h2 ,p{font-family:trebuchet ms;}
+
+h3 {
+font-size:40px;
+  
+}
+
+h2 {
+font-size:20px;
+}
+
+header {
+    margin: auto;
+    width: 100%;
+}
+.title1 h3{
+display: flex;
+justify-content: center;
+font-variant: small-caps;
+margin: 10px auto;
+width: 35%;
+background: #4286f4;
+color:#fff;
+}
+
+.title2{
+    display: none;
+}
+
+.title2 h3{
+margin:5px;
+color:#fff;
+}
+
+.stick .title2{
+	background: #4286f4 none repeat scroll 0 0;
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 5;
+	justify-content: space-between;
+}
+
+.stick .title2 .button{
+margin: 5px;
+}
+
+.content{
+    margin: auto;
+    width: 90%;
+	max-width: 1024px;
+    display: flex;
+    flex-wrap: wrap;
+	justify-content: space-around;
+	padding-bottom:25px;
+}
+
+.about{
+text-align: center;
+margin-bottom:25px;
+}
+
+.about p{
+margin:5px;
+}
+
+
+.imggen p{
+    display: flex;
+    font-weight: bold;
+    justify-content: center;
+}
+
+.modal-footer p{
+float:left;
+margin-bottom:0;
+padding-top:8px;
+}
+
+.modal-inception{
+text-align:left;
+}
+
+.modal-inception  .modal-body{
+overflow:scroll;
+}
+
+.imggen img {
+width:300px;
+}
+
+.modal-body img {
+width:100%;
+}
+
+.button{
+    background: white;
+    border-color: black;
+    border-style: solid;
+    font-weight: bold;
+}
+
+footer {
+    background: whitesmoke none repeat scroll 0 0;
+    border-top: 1px solid;
+    bottom: 0;
+    font-size: 12px;
+    left: 0;
+    margin: 0;
+    position: fixed;
+    width: 100%;
+}
+footer p{
+text-align: center;
+margin: 0;
+}
