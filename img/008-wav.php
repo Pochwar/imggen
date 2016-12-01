@@ -77,7 +77,7 @@ while ($count <= $linenum)
 		$color = imagecolorallocate($image, $r, $g, $b); //set line color
 		imagesetthickness($image, $thick); //set line thickness
 		$x2=$x1;$y2=$height-$y1; //lets trace centered vertical line
-		imageline ($image, $x1, $y1, $x2, $y2, $couleur); //create line
+		imageline ($image, $x1, $y1, $x2, $y2, $color); //create line
 		
 		
 		//NEXT LINE
