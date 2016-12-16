@@ -202,7 +202,7 @@ include ('help.php');
             </article>
         </div>
         <footer>
-            <p>Credit : Benoît Ripoche - contact : <a href="mailto:contact@pochworld.com">contact@pochworld.com</a></p>
+            <p>All images are under <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" target="_blank">Creative Commons Licence BY-NC-SA</a> - Credit : Benoît Ripoche - Github -> <a href="https://github.com/Poshri" target="_blank">Pochwar</a></p>
         </footer>
   
         <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
