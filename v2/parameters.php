@@ -24,3 +24,4 @@ $_SESSION[param_array] = $default_param_array = array(
         "blimits" => "0,255",
         "fillmode" => "1"
     );
+?>
