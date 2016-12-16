@@ -1,6 +1,6 @@
 <?php
 //get default parameters
-include (parameters.php);
+include ('parameters.php');
 
 //destroy edit session to allow image modifying
 if (isset($_POST[modif])){unset($_SESSION[edit]);}
