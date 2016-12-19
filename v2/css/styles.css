@@ -82,13 +82,17 @@ article {
     height:100%;
 }
 
+.alert{
+    background: rgba(0, 0, 0, 0.6) none repeat scroll 0 0;
+    border-radius: 5px;
+    color: red;
+    width: 30%;
+}
+
 .form{
 clear:both;
 }
 
-#myform{
-    
-}
 
 .param_title {
     text-align: center;
@@ -362,7 +366,7 @@ font-size:15px;
 }
 
 input[type=submit] {
-    background-color: #e8f3f6;
+    background-color: #70A0EE;
     border: 1px solid grey;
     border-radius: 4px;
     color: #000;
@@ -371,6 +375,7 @@ input[type=submit] {
     margin: 10px auto auto;
     padding: 14px;
     width: 80%;
+    color: #fff;
 }
 
 
@@ -418,6 +423,15 @@ text-align: center;
     height: 50px;
     width: 70px;
 }
+
+   
+#randform input{
+    width: unset;
+    padding: 5px 10px;
+    background:#f3f5f5;
+    color:#337ab7;
+ }
+
 #editimg{
     height: 70px;
     width: 270px;
@@ -425,6 +439,16 @@ text-align: center;
 #editimg input{
     margin-top: 0;
 }
+
+#saveform .sign{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 10px auto 0;
+    transform: scale(0.9);
+    width: 70%;
+}
+
 .imggal{
     max-width: 250px;
 }

@@ -2,11 +2,11 @@
 //get default parameters
 include ('parameters.php');
 
-//destroy edit session to allow image modifying
-if (isset($_POST[modif])){unset($_SESSION[edit]);}
+//destroy edit and random sessions to allow image modifying
+if (isset($_POST[modif])){unset($_SESSION[edit]);unset($_SESSION[rand]);unset($_SESSION[default_alert]);}
 
 //New image
-if (!isset($_SESSION[edit])){
+if (!isset($_SESSION[edit]) && !isset($_SESSION[rand])){
     //if no value is post, apply default value
     foreach($_SESSION[param_array] as $key => $value){
         if (!isset ($_POST[$key])){$_SESSION[$key] = $value;}
@@ -18,6 +18,10 @@ if (!isset($_SESSION[edit])){
     if ($_SESSION[incrb] != 0){$_SESSION[incrb] = 1;}
 }
 
+//set alert message
+if (isset($_SESSION[default_alert])){
+    $default_alert = "<p class=\"alert\">Please change at least one parameter</p>";
+}
 //edit mode
 if (isset($_SESSION[edit])){
     //get ID of image to edit
@@ -27,7 +31,9 @@ if (isset($_SESSION[edit])){
     foreach($_SESSION[param_array] as $key => $value){
         $_SESSION[$key] = $_SESSION[$key."_gal"][$ver];
     }
+}
 
+if (isset($_SESSION[edit]) || isset($_SESSION[rand])){
     //if inverse is ON, check checkboxes
     if ($_SESSION[incrr] == 0){$check_incrr = "checked";}
     elseif ($_SESSION[incrg] == 0){$check_incrg = "checked";}

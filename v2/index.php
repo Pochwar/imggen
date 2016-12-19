@@ -187,8 +187,16 @@ include ('help.php');
                         </div>
                         <input type="hidden" name="modif" value="ok" />
                     </form>
-                    <form action="save.php"  method="post" id="saveform">
+                    <form action="random.php"  method="post" id="randform">
+                        <input type="hidden" name="rand" value="1" />
+                        <input type="submit" value="Randomize !">
+                    </form>
+                    <form action="save.php"  method="post" id="saveform">                        
                         <input type="submit" value="Save image to gallery (Exit editor)">
+                        <div class="sign">
+                            Sign your artwork : <input type="text" maxlength="25" id="sign" name="sign" placeholder="Anonymous"/>
+                            <div class="param_info" data-html="true" data-toggle="tooltip" data-placement="top" title="<?php echo $help_8 ?>">?</div>
+                        </div>
                     </form>
                 </div>
             </aside>

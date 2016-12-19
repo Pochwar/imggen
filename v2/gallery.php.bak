@@ -1,12 +1,9 @@
-<?php
+﻿<?php
 session_start();
 
 //destroy edit and random session to display default image when going back to home
 unset($_SESSION[edit]);
 unset($_SESSION[rand]);
-
-//destroy default_alert session
-unset($_SESSION[default_alert]);
 
 //get parameters
 include ('parameters.php');
@@ -60,10 +57,12 @@ foreach($_SESSION[param_array] as $value){$_SESSION[$value."_gal"] = array();}
         </header>
         <?php
         //define directory of saved presets
-        $file = "presets.txt";
+        $dir = "presets";
         //count how many presets have been saved
-        $nbimg = file_get_contents($file);
-        $nbimg = substr_count($nbimg, "\n");
+        function countFolder($folder) {
+            return (count(scandir($folder)) - 2);
+        }
+        $nbimg = countFolder($dir);
         echo "<div class=\"count\">$nbimg images created since 2016-12-11</div>";
         ?>
         <div class="info_gal">
@@ -73,17 +72,20 @@ foreach($_SESSION[param_array] as $value){$_SESSION[$value."_gal"] = array();}
         <?php
         //scan presets directory
         $ver = 0;
-        $lines = file($file);
-        foreach ($lines as $line_num => $line) {
+        chdir($dir);
+        array_multisort(array_map('filemtime', ($files = glob("*.{txt}", GLOB_BRACE))), SORT_DESC, $files);
+        foreach($files as $filename)
+        {
             //get presets from file name
-            $line = explode("_", $line);
+            $filename = str_replace(".txt", "", $filename);
+            $filename = explode("_", $filename);
             //set presets to session for each image
             $x=0;
             foreach($_SESSION[param_array] as $key => $value){
-                $_SESSION[$key."_gal"][$ver] = $line[$x];
+                $_SESSION[$key."_gal"][$ver] = $filename[$x];
                 $x++;
             }
-            if(isset($line[20]) && $line[20] != "_"){$sign = $line[20];}
+            if(isset($filename[20]) && $filename[20] != "_"){$sign = $filename[20];}
             else {$sign = "Anonymous";}
             //display images in gallery
             echo "
@@ -121,7 +123,7 @@ foreach($_SESSION[param_array] as $value){$_SESSION[$value."_gal"] = array();}
         ?>
         </div>
         <footer>
-            <p>Credit : Beno�t Ripoche - contact : <a href="mailto:contact@pochworld.com">contact@pochworld.com</a></p>
+            <p>Credit : Benoît Ripoche - contact : <a href="mailto:contact@pochworld.com">contact@pochworld.com</a></p>
         </footer>
   
         <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>

@@ -8,7 +8,9 @@ $help_2 = "Divide image in <b>columns</b> & <b>rows</b> creating a grid of squar
 $help_3 = "Choose the color of the first square (top left) by setting the amount of <b>red</b>, <b>green</b> & <b>blue</b>.";
 
 $help_4 = "Each square's color depends of the previous square (begining with the first one at top left).
-<br>Choose how the amount of <b>red</b>, <b>green</b> & <b>blue</b> will be modified square by square.";
+<br>Choose how the amount of <b>red</b>, <b>green</b> & <b>blue</b> will be modified square by square.
+<br>Check <b>Glitch</b> to glitch modification.
+<br>Check <b>Inverse</b> to change sens of modification.";
 
 $help_5 = "Choose the sens of <b>Color modification</b> for each color. <b>1</b> is for increase, <b>0</b> for decrease.";
 
@@ -21,4 +23,8 @@ $help_7 = "First square is always at top left. Choose wich squares will be fille
 <br>- <b>rows snake</b> fills the image row by row left to right then right to left and so on.
 <br>- <b>columns</b> fills the image columns by columns always top to bottom.
 <br>- <b>rows snake</b> fills the image columns by columns top to bottom then bottom to top and so on.";
+
+$help_8 = "Type your name to sign your beautiful artwork.!
+<br>List of forbidden characters :
+<br><b>% & ~ # [ ] ` ^ = $ * { } | < > _ / \\ ' &quot</b>";
 ?>
