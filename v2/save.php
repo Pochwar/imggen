@@ -15,10 +15,10 @@ $sign = str_replace($unwcar, '', $sign);
 
 
 //put presets in a single variable
-$name = $width."_".$height."_".$columns."_".$rows."_".$r."_".$g."_".$b."_".$rmod."_".$gmod."_".$bmod."_".$incrr."_".$incrg."_".$incrb."_".$r_glitch."_".$g_glitch."_".$b_glitch."_".$rlimits."_".$glimits."_".$blimits."_".$fillmode."_".$sign."\n";
+$name = $width."_".$height."_".$columns."_".$rows."_".$r."_".$g."_".$b."_".$rmod."_".$gmod."_".$bmod."_".$incrr."_".$incrg."_".$incrb."_".$r_glitch."_".$g_glitch."_".$b_glitch."_".$rlimits_min."_".$rlimits_max."_".$glimits_min."_".$glimits_max."_".$blimits_min."_".$blimits_max."_".$fillmode."_".$sign."\n";
 
 //prevent saving default file
-if(strstr($name, "600_600_5_5_50_100_150_5_5_5_1_1_1_0_0_0_0,255_0,255_0,255_1")){
+if(strstr($name, "600_600_5_5_50_100_150_5_5_5_1_1_1_0_0_0_0_255_0_255_0_255_1")){
     $_SESSION[default_alert] = 1;
     header('Location: index.php');
 }

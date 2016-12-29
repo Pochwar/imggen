@@ -19,9 +19,12 @@ $_SESSION[param_array] = $default_param_array = array(
         "r_glitch" => "0",
         "g_glitch" => "0",
         "b_glitch" => "0",
-        "rlimits" => "0,255",
-        "glimits" => "0,255",
-        "blimits" => "0,255",
+        "rlimits_min" => "0",
+        "rlimits_max" => "255",
+        "glimits_min" => "0",
+        "glimits_max" => "255",
+        "blimits_min" => "0",
+        "blimits_max" => "255",
         "fillmode" => "1"
     );
 ?>

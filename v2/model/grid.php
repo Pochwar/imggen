@@ -37,17 +37,14 @@ $incrg=$_SESSION['incrg']; // green modification sens (1 = increase, 0 = decreas
 $incrb=$_SESSION['incrb']; // blue modification sens (1 = increase, 0 = decrease)
 //AMPLITUDE
 ////RED LIMITS (rmin must be inferior to rmax)
-$rlimits = explode (",",$_SESSION['rlimits']);
-$rmin = $rlimits[0];
-$rmax = $rlimits[1];
+$rmin = $_SESSION['rlimits_min'];
+$rmax = $_SESSION['rlimits_max'];
 ////GREEN LIMITS (gmin must be inferior to gmax)
-$glimits = explode (",",$_SESSION['glimits']);
-$gmin = $glimits[0];
-$gmax = $glimits[1];
+$gmin = $_SESSION['glimits_min'];
+$gmax = $_SESSION['glimits_max'];
 ////BLUE LIMITS (bmin must be inferior to bmax)
-$blimits = explode (",",$_SESSION['blimits']);
-$bmin = $blimits[0];
-$bmax = $blimits[1];
+$bmin = $_SESSION['blimits_min'];
+$bmax = $_SESSION['blimits_max'];
 
 ////////////////
 //IMAGE CREATE//

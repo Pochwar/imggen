@@ -24,6 +24,7 @@ header {
     margin: auto;
     width: 100%;
 }
+
 .title1 h3{
 display: flex;
 justify-content: center;
@@ -114,7 +115,15 @@ aside.active .buttn:before{
     content:">";
 }
 
-.buttn{
+.ui-mobile .ui-page-active{
+    height:100%;
+}
+
+.ui-content{
+    width: 100%;
+}
+
+#buttn{
     background: #fff none repeat scroll 0 0;
     border: 1px solid;
     border-radius: 5px;
@@ -123,6 +132,8 @@ aside.active .buttn:before{
     font-weight: bold;
     margin-right: -37px;
     font-size: 30px;
+    padding: 5px;
+    width: auto;
 }
 
 .param_title h2{
@@ -137,14 +148,24 @@ aside.active .buttn:before{
     font-size: 18px;
 }
 
-.arrow{
-    background: rgba(0, 0, 0, 0) url("arrow.png") no-repeat scroll 0 0 / 100% auto;
-    height: 53px;
-    left: 196px;
-    position: fixed;
-    top: 175px;
-    width: 50px;
-}
+
+
+  .trigg:after {
+    font-family: "Glyphicons Halflings";
+    content: "\e259";
+    float: right;
+    font-size: 10px;
+    margin: 2px 0 0 8px;
+    transition:transform 0.2s ease;
+  }
+
+  .trigg.collapsed:after {
+    transform:rotate(-90deg);
+    margin: 2px 0 0 8px;
+  }
+  
+
+
 
 .param{
     background-color: #f3f5f5;
@@ -211,74 +232,17 @@ aside.active .buttn:before{
     margin-top: 8px;
 }
 
-#myform  .slider.slider-horizontal {
-    width: 115px;
+.norange .ui-slider{
+     margin: 0;
 }
 
-#myform .slider.slider-vertical {
-    height: 150px;
+.norange .ui-slider .ui-slider-input{
+    float: right;
 }
 
-#myform .slider-handle {
-    width: 8px;
-    border-radius: 5px;
-}
-
-#myform .slider-selection {
-    background:#89cdef;
-}
-
-#myform .slider-tick {
-    display: none;
-}
-#myform .slider-track {
-    margin-left: -7px;
-}
-#r .slider-selection {
-	background: #fff;
-}
-#r .slider-track-high {
-	background: red;
-}
-#r .slider-handle {
-	background: red;
-}
-#g .slider-selection {
-	background: #fff;
-}
-#g .slider-track-high {
-	background: #428041;
-}
-#g .slider-handle {
-	background: green;
-}
-#b .slider-selection {
-	background: #fff;
-}
-#b .slider-track-high {
-	background: #8283FF;
-}
-#b .slider-handle {
-	background: blue;
-}
-
-#rmod .slider-rangeHighlight {
-        background: #f70616;
-    }
-    
-#gmod .slider-rangeHighlight {
-        background: #f70616;
-    }
-    
-#bmod .slider-rangeHighlight {
-        background: #f70616;
-    }
-
-#RGB {
-	height: 20px;
-	background: rgb(50, 100, 150);
-    border-radius: 5px;
-    width: 150px;
+.norange .ui-slider .ui-slider-track{
+    margin: 0;
+    width: 190px;
 }
 
 .param_content {
@@ -343,17 +307,26 @@ aside.active .buttn:before{
 .checkboxes {
     align-items: baseline;
     display: flex;
-    flex-direction: column;
+    justify-content: space-around;
+    margin: -5px 0 15px;
 }
 
 .checkboxes p{
-    align-items: center;
-    display: flex;
     font-size: 10px;
+}
+
+.checkboxes p div{
+    margin-top: 0;
+}
+
+.checkboxes p div input[type="checkbox"]{
+    margin: 0;
 }
 
 .checkboxes label{
     margin-bottom: 0;
+    margin-left: 28px;
+    font-size:10px;
 }
 
 .tooltip{

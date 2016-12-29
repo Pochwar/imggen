@@ -21,7 +21,6 @@ foreach($_SESSION[param_array] as $value){$_SESSION[$value."_gal"] = array();}
         <meta charset="utf-8">
         <meta name="description" content="Generate images with PHP">
         <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css" media="all"/>
-        <link rel="stylesheet" type="text/css" href="css/bootstrap-slider.css">
         <link rel="stylesheet" type="text/css" href="css/styles.css" media="all"/>
         <meta name="viewport" content="width=device-width, user-scalable=no">
         <meta property="og:title" content="ImgGen V2" />
@@ -54,8 +53,8 @@ foreach($_SESSION[param_array] as $value){$_SESSION[$value."_gal"] = array();}
                 <!-- end of hack -->
         
             <div class="about">
-                    <p>GALLERY</p>
-                    <p><a href="index.php">Home</a></p>
+                    <p><i>ImgGen is a project about generating images with PHP.</i></p>
+                    <p><a href="index.php">Home</a> - <b>Gallery</b></p>
             </div>
         </header>
         <?php
@@ -83,7 +82,7 @@ foreach($_SESSION[param_array] as $value){$_SESSION[$value."_gal"] = array();}
                 $_SESSION[$key."_gal"][$ver] = $line[$x];
                 $x++;
             }
-            if(isset($line[20]) && $line[20] != "_"){$sign = $line[20];}
+            if(isset($line[23]) && $line[23] != "_"){$sign = $line[23];}
             else {$sign = "Anonymous";}
             //display images in gallery
             echo "
@@ -123,7 +122,6 @@ foreach($_SESSION[param_array] as $value){$_SESSION[$value."_gal"] = array();}
         <footer>
             <p>Credit : Benoît Ripoche - contact : <a href="mailto:contact@pochworld.com">contact@pochworld.com</a></p>
         </footer>
-  
         <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script src="js/functions.js"></script>
