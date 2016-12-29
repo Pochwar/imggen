@@ -35,7 +35,8 @@
 		<!-- end of hack -->
 		<div class="title2"><h3>ImgGen v1</h3><input class="button" type="button" OnClick="javascript:window.location.reload()" value="Refresh"></div>
 		<div class="about">
-				<p>ImgGen is a project about generating images with PHP.</p>
+				<p><i>Generated images with PHP.</i></p>
+                <p><a href="v2">V2 is online !</a></p>
 				<p>Randomness is used for some parameters, so every generated image is unique (more or less).</p>
 				<p>Try to <input class="button" type="button" OnClick="javascript:window.location.reload()" value="Refresh"> page to see what happens !</p>
 		</div>
