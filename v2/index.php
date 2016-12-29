@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 session_start();
 include ('process.php');
 include ('help.php');
@@ -43,7 +43,7 @@ include ('help.php');
                 <!-- end of hack -->
         
             <div class="about">
-                    <p><i>ImgGen is a project about generating images with PHP.</i></p>
+                    <p><i>Generated images with PHP.</i></p>
                     <p><b>Home</b> - <a href="gallery.php">Gallery</a> - <a href="..">V1</a></p>
             </div>
         </header>
@@ -146,6 +146,7 @@ include ('help.php');
                                     <option value="1.2"<?php echo $selected_1_2; ?>>rows "snake"</option>
                                     <option value="2" <?php echo $selected_2; ?>>columns</option>
                                     <option value="2.2"<?php echo $selected_2_2; ?>>columns "snake"</option>
+                                    <option value="3"<?php echo $selected_3; ?>>spiral</option>
                                     </select>
                                 </p>
                             </div>
@@ -197,7 +198,7 @@ include ('help.php');
             </article>
         </div>
         <footer>
-            <p>All images are under <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" target="_blank">Creative Commons Licence BY-NC-SA</a> - Credit : Beno�t Ripoche - Github -> <a href="https://github.com/Poshri" target="_blank">Pochwar</a></p>
+            <p>All images are under <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" target="_blank">Creative Commons Licence BY-NC-SA</a> - Credit : Generated with ImgGen by Benoît Ripoche - Github -> <a href="https://github.com/Poshri" target="_blank">Pochwar</a></p>
         </footer>
   
         

@@ -31,7 +31,7 @@ justify-content: center;
 font-variant: small-caps;
 margin: 10px auto;
 width: 35%;
-background: #4286f4;
+background: #337AB7;
 color:#fff;
 padding: 0 15px;
 }
@@ -46,7 +46,7 @@ color:#fff;
 }
 
 .stick .title2{
-	background: #4286f4 none repeat scroll 0 0;
+	background: #337AB7 none repeat scroll 0 0;
     display: flex;
     position: fixed;
     top: 0;

@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 session_start();
 
 //destroy edit and random session to display default image when going back to home
@@ -53,8 +53,8 @@ foreach($_SESSION[param_array] as $value){$_SESSION[$value."_gal"] = array();}
                 <!-- end of hack -->
         
             <div class="about">
-                    <p><i>ImgGen is a project about generating images with PHP.</i></p>
-                    <p><a href="index.php">Home</a> - <b>Gallery</b></p>
+                    <p><i>Generated images with PHP.</i></p>
+                    <p><a href="index.php">Home</a> - <b>Gallery</b> - <a href="..">V1</a></p>
             </div>
         </header>
         <?php
@@ -120,7 +120,7 @@ foreach($_SESSION[param_array] as $value){$_SESSION[$value."_gal"] = array();}
         ?>
         </div>
         <footer>
-            <p>Credit : Beno�t Ripoche - contact : <a href="mailto:contact@pochworld.com">contact@pochworld.com</a></p>
+            <p>All images are under <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" target="_blank">Creative Commons Licence BY-NC-SA</a> - Credit : Generated with ImgGen by Benoît Ripoche - Github -> <a href="https://github.com/Poshri" target="_blank">Pochwar</a></p>
         </footer>
         <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>

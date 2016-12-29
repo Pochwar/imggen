@@ -49,6 +49,7 @@ if (isset($_SESSION[edit]) || isset($_SESSION[rand])){
     elseif ($_SESSION[fillmode] == 1.2){$selected_1_2 = "selected";}
     elseif ($_SESSION[fillmode] == 2){$selected_2 = "selected";}
     elseif ($_SESSION[fillmode] == 2.2){$selected_2_2 = "selected";}
+    elseif ($_SESSION[fillmode] == 3){$selected_3 = "selected";}
 }
 ?>
 

@@ -15,7 +15,7 @@ if(isset($_POST[rand])) {
 //random mode
 //if ($_SESSION[rand] == 1){
     //set array for fillmode values
-    $fill = array(1, 1.2, 2, 2.2);
+    $fill = array(1, 1.2, 2, 2.2, 3);
     //set random values for color limits
     $r1 = rand(0,255);
     $r2 = rand(0,255);
