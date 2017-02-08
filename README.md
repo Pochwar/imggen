@@ -14,6 +14,6 @@ I don't have much time to continue this project for now, but I have ideas to imp
 - Add fillmodes (spiral, target, ...)
 - Get a cleaner code ! (I'm not the best developper I know ;) )
 
-If you're interessted by this project and want to help me, send me a mail !
+If you're interessted by this project and want to help me, send me a mail
 
 Otherwise, have fun generating images !
