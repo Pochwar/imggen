@@ -2,20 +2,20 @@
 session_start();
 
 //destroy default_alert session
-unset($_SESSION[default_alert]);
+unset($_SESSION['default_alert']);
 
 //destroy edit session to allow randomisation
-unset($_SESSION[edit]);
+unset($_SESSION['edit']);
 
 //Set rand mode to ON
 if(isset($_POST[rand])) {
-    $_SESSION[rand] = $_POST[rand];
+    $_SESSION['rand'] = $_POST[rand];
 }
 
 //random mode
-//if ($_SESSION[rand] == 1){
+//if ($_SESSION['rand'] == 1){
     //set array for fillmode values
-    $fill = array(1, 1.2, 2, 2.2, 3);
+    $fill = array(1, 1.2, 2, 2.2, 3, 4);
     //set random values for color limits
     $r1 = rand(0,255);
     $r2 = rand(0,255);
@@ -27,7 +27,7 @@ if(isset($_POST[rand])) {
     $b2 = rand(0,255);
     if ($b1 <= $b2){$bmin = $b1; $bmax = $b2;} else {$bmin = $b2; $bmax = $b1;}
     //set random values
-    $_SESSION[param_array] = $param_array_random = array(
+    $_SESSION['param_array'] = $param_array_random = array(
         "width" => rand(50,1000),
         "height" => rand(50,1000),
         "columns" => rand(1,250),
@@ -53,7 +53,7 @@ if(isset($_POST[rand])) {
         "fillmode" => $fill[array_rand($fill)]
     );
     //get radom values
-    foreach($_SESSION[param_array] as $key => $value){
+    foreach($_SESSION['param_array'] as $key => $value){
         $_SESSION[$key] = $value;
     }
 //};

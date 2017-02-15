@@ -2,16 +2,16 @@
 session_start();
 
 //get parameters
-foreach($_SESSION[param_array] as $key => $value){
+foreach($_SESSION['param_array'] as $key => $value){
         $$key = $_SESSION[$key];
 }
 
-if(isset($_POST[sign]) && !empty($_POST[sign])){$sign = $_POST[sign];}
+if(isset($_POST['sign']) && !empty($_POST['sign'])){$sign = $_POST['sign'];}
 else {$sign = "Anonymous";}
 
 //array of unwanted caracters prevent inserting character by copy/paste
 $unwcar = array ('%','&','~','#','[',']','`','^','=','$','*','{','}','|','<','>','_','/','\\','\'','"');
-$sign = str_replace($unwcar, '', $sign); 
+$sign = str_replace($unwcar, '', $sign);
 
 
 //put presets in a single variable
@@ -19,7 +19,7 @@ $name = $width."_".$height."_".$columns."_".$rows."_".$r."_".$g."_".$b."_".$rmod
 
 //prevent saving default file
 if(strstr($name, "600_600_5_5_50_100_150_5_5_5_1_1_1_0_0_0_0_255_0_255_0_255_1")){
-    $_SESSION[default_alert] = 1;
+    $_SESSION['default_alert'] = 1;
     header('Location: index.php');
 }
 

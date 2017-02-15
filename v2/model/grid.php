@@ -8,7 +8,7 @@ header ("Content-type: image/png");
 /////////////
 //
 //IMAGE SIZE
-$width=$_SESSION['width']; //image width in px
+$width= $_SESSION['width']; //image width in px
 $height=$_SESSION['height']; //image height in px
 //
 //BACKGROUND GRID
@@ -28,9 +28,9 @@ $rmod=$_SESSION['rmod']; //red modification amount (no negative value, 0 allowed
 $gmod=$_SESSION['gmod']; //green modification amount (no negative value, 0 allowed)
 $bmod=$_SESSION['bmod']; //blue modification amount (no negative value, 0 allowed)
 ////apply glitch mode to color modification (= set value negative)
-if ($_SESSION[r_glitch] == 1){$rmod = "-".$rmod;}
-if ($_SESSION[g_glitch] == 1){$gmod = "-".$gmod;}  
-if ($_SESSION[b_glitch] == 1){$bmod = "-".$bmod;}  
+if ($_SESSION['r_glitch'] == 1){$rmod = "-".$rmod;}
+if ($_SESSION['g_glitch'] == 1){$gmod = "-".$gmod;}
+if ($_SESSION['b_glitch'] == 1){$bmod = "-".$bmod;}
 //SENS
 $incrr=$_SESSION['incrr']; // red modification sens (1 = increase, 0 = decrease)
 $incrg=$_SESSION['incrg']; // green modification sens (1 = increase, 0 = decrease)
@@ -59,6 +59,7 @@ $image = imagecreatetruecolor($width,$height);
 //
 $fillmode = $_SESSION['fillmode'];
 
+
 ////////////
 //MARQUERS//
 ////////////
@@ -69,7 +70,7 @@ $y1 = 0; //top coord of square
 $x2 = $colwidth; //right coord of square
 $y2 = $rowheight; //bottom coord of square
 
-    
+
 ////////////
 //THE LOOP//
 ////////////
@@ -79,6 +80,9 @@ if($fillmode == 1 || $fillmode == 1.2 || $fillmode == 2 || $fillmode == 2.2){
 }
 elseif($fillmode == 3){
     include('fillmode3.php');
+}
+elseif($fillmode == 4){
+    include('fillmode4.php');
 }
 
 ////////////////

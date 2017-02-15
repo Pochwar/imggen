@@ -2,7 +2,7 @@
 session_start();
 
 //set parameters array with default values
-$_SESSION[param_array] = $default_param_array = array(
+$_SESSION['param_array'] = $default_param_array = array(
         "width" => "600",
         "height" => "600",
         "columns" => "5",

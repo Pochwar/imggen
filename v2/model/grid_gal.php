@@ -84,7 +84,9 @@ if($fillmode == 1 || $fillmode == 1.2 || $fillmode == 2 || $fillmode == 2.2){
 elseif($fillmode == 3){
     include('fillmode3.php');
 }
-
+elseif($fillmode == 4){
+    include('fillmode4.php');
+}
 
 ////////////////
 //RENDER IMAGE//

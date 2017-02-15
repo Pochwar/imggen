@@ -2,17 +2,17 @@
 session_start();
 
 //destroy edit and random session to display default image when going back to home
-unset($_SESSION[edit]);
-unset($_SESSION[rand]);
+unset($_SESSION['edit']);
+unset($_SESSION['rand']);
 
 //destroy default_alert session
-unset($_SESSION[default_alert]);
+unset($_SESSION['default_alert']);
 
 //get parameters
 include ('parameters.php');
 
 //define _SESSION values as array
-foreach($_SESSION[param_array] as $value){$_SESSION[$value."_gal"] = array();}
+foreach($_SESSION['param_array'] as $value){$_SESSION[$value."_gal"] = array();}
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -20,7 +20,7 @@ foreach($_SESSION[param_array] as $value){$_SESSION[$value."_gal"] = array();}
         <title>ImgGen v2</title>
         <meta charset="utf-8">
         <meta name="description" content="Generate images with PHP">
-        <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css" media="all"/>
+        <link rel="stylesheet" type="text/css" href="../../bootstrap/css/bootstrap.min.css" media="all"/>
         <link rel="stylesheet" type="text/css" href="css/styles.css" media="all"/>
         <meta name="viewport" content="width=device-width, user-scalable=no">
         <meta property="og:title" content="ImgGen V2" />
@@ -38,7 +38,7 @@ foreach($_SESSION[param_array] as $value){$_SESSION[$value."_gal"] = array();}
                         <clipPath id="banner" clipPathUnits="objectBoundingBox">
                             <polygon points="0 0, 1 0, 0.95 0.5, 1 1, 0 1, 0.05 0.5" />
                         </clipPath>
-                    </defs>	
+                    </defs>
                 </svg>
                 <style>
                     .title1 h3 {
@@ -51,7 +51,7 @@ foreach($_SESSION[param_array] as $value){$_SESSION[$value."_gal"] = array();}
                         }
                 </style>
                 <!-- end of hack -->
-        
+
             <div class="about">
                     <p><i>Generated images with PHP.</i></p>
                     <p><a href="index.php">Home</a> - <b>Gallery</b> - <a href="..">V1</a></p>
@@ -78,7 +78,7 @@ foreach($_SESSION[param_array] as $value){$_SESSION[$value."_gal"] = array();}
             $line = explode("_", $line);
             //set presets to session for each image
             $x=0;
-            foreach($_SESSION[param_array] as $key => $value){
+            foreach($_SESSION['param_array'] as $key => $value){
                 $_SESSION[$key."_gal"][$ver] = $line[$x];
                 $x++;
             }
@@ -97,7 +97,7 @@ foreach($_SESSION[param_array] as $value){$_SESSION[$value."_gal"] = array();}
                         <div class=\"modal-content\">
                             <div class=\"modal-header\">
                                 <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>
-                                <h4 class=\"modal-title\">A generated image by $sign</h4>
+                                <h4 class=\"modal-title\">A generated image by <span>$sign</span></h4>
                             </div>
                             <div class=\"modal-body\">
                                 <img src=\"model/grid_gal.php?ver=$ver\">
@@ -115,18 +115,16 @@ foreach($_SESSION[param_array] as $value){$_SESSION[$value."_gal"] = array();}
                 <!-- FIN MODAL-->
                 ";
          $ver++;
-        } 
+        }
 
         ?>
         </div>
         <footer>
-            <p>All images are under <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" target="_blank">Creative Commons Licence BY-NC-SA</a> - Credit : Generated with ImgGen by Benoît Ripoche - Github -> <a href="https://github.com/Poshri" target="_blank">Pochwar</a></p>
+            <p>All images are under <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" target="_blank">Creative Commons Licence BY-NC-SA</a> - Credit : Generated with ImgGen by Benoît Ripoche - Github -> <a href="https://github.com/Pochwar" target="_blank">Pochwar</a></p>
         </footer>
-        <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src='../js/jquery.min.js'></script>
+        <script src="../bootstrap/js/bootstrap.min.js"></script>
         <script src="js/functions.js"></script>
 
     </body>
 </html>
-
-

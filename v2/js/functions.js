@@ -30,7 +30,7 @@ $(document).ready(function () {
 });
 
 
-//PREVENT INSERTING UNWANTED CARACTERS IN SIGNING
+//PREVENT INSERTING UNWANTED CARACTERS IN SIGN IN
 $("#sign").keypress( function(e) {
     var chr = String.fromCharCode(e.which);
     if ('%&~#[]`^=$*{}|<>_/\\\'"'.indexOf(chr) != -1)
